@@ -29,12 +29,12 @@ type MetricAttributes struct {
 	// returns strings, and sometimes it returns integers
 	DisplayMax        interface{} `json:"display_max"`
 	DisplayMin        interface{} `json:"display_min"`
-	DisplayUnitsLong  string      `json:"display_units_long"`
-	DisplayUnitsShort string      `json:"display_units_short"`
-	DisplayStacked    bool        `json:"display_stacked"`
-	CreatedByUA       string      `json:"created_by_ua,omitempty"`
-	GapDetection      bool        `json:"gap_detection,omitempty"`
-	Aggregate         bool        `json:"aggregate,omitempty"`
+	DisplayUnitsLong  *string     `json:"display_units_long"`
+	DisplayUnitsShort *string     `json:"display_units_short"`
+	DisplayStacked    *bool       `json:"display_stacked"`
+	CreatedByUA       *string     `json:"created_by_ua,omitempty"`
+	GapDetection      *bool       `json:"gap_detection,omitempty"`
+	Aggregate         *bool       `json:"aggregate,omitempty"`
 }
 
 // ListMetricsOptions are used to coordinate paging of metrics.
